@@ -1,16 +1,7 @@
-#include <iostream>
-
-#include "../include/Game.h"
+#include "core/engine/Game.h"
 
 int main() {
-    try {
-        Game game;
-        game.run();
-    }
-    catch (const std::exception& e) {
-        std::cerr << "Error: " << e.what() << std::endl;
-        return EXIT_FAILURE;
-    }
-
-    return EXIT_SUCCESS;
+    Game game;
+    game.run();
+    return 0;
 }
