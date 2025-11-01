@@ -2,6 +2,7 @@
 #include <memory>
 #include <stack>
 #include "Scene.h"
+#include "scenes/menu/MenuScene.h"
 
 class SceneManager {
 private:

@@ -1,0 +1,25 @@
+{
+  "title": "Đức học làm game - v1",
+  "items": [
+    {
+      "label": "Tiếp tục",
+      "action": "START_CONTINUE"
+    },
+    {
+      "label": "Chơi mới",
+      "action": "START_NEW_GAME"
+    },
+    {
+      "label": "Lịch sử",
+      "action": "GET_HISTORY"
+    },
+    {
+      "label": "Cấu hình",
+      "action": "GET_CONFIG"
+    },
+    {
+      "label": "Thoát game",
+      "action": "EXIT_GAME"
+    }
+  ]
+}

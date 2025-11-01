@@ -30,14 +30,7 @@ link_directories(${SFML_DIR}/lib)
 # ================== SOURCE FILES ==================
 file(GLOB_RECURSE SOURCES ${SRC_DIR}/*.cpp)
 
-add_executable(${PROJECT_NAME} ${SOURCES}
-        ../src/components/button/Button.h
-        ../src/components/menu/Menu.cpp
-        ../src/components/menu/Menu.h
-        ../src/core/logger/Logger.h
-        ../src/core/logger/Logger.cpp
-        ../src/utils/TextUtils.h
-        ../src/utils/TextUtils.cpp)
+add_executable(${PROJECT_NAME} ${SOURCES})
 
 target_link_libraries(${PROJECT_NAME}
         sfml-graphics

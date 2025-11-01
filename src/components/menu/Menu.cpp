@@ -2,28 +2,27 @@
 #include <iostream>
 
 #include "core/logger/Logger.h"
+#include "data/domain/menu/MenuData.h"
 #include "utils/TextUtils.h"
 
-Menu::Menu(const sf::RenderWindow& window) {
-    font.loadFromFile("../../resources/fonts/Roboto-Regular.ttf");
+Menu::Menu(const sf::RenderWindow& window, const MenuData& menuData) {
+    font.loadFromFile("../../resources/assets/fonts/Roboto-Regular.ttf");
 
     title.setFont(font);
-
-    const std::string rawText = u8"Đức học làm game - v1";
-    title.setString(TextUtils::utf8(rawText));
-
+    title.setString(TextUtils::utf8(menuData.title));
     title.setCharacterSize(40);
     title.setFillColor(sf::Color::Cyan);
     title.setStyle(sf::Text::Bold);
 
-    std::vector<std::string> games = {"Tetris", "Snake", "Flappy Bird", "Pong", "Exit"};
-    for (const auto& name : games) {
-        buttons.emplace_back(font, name, 0.f, 0.f);
+    // Dùng data từ repository
+    for (const auto& item : menuData.items) {
+        buttons.emplace_back(font, item.label, 0.f, 0.f);
     }
 
     buttons[selectedIndex].setHovered(true);
     updateLayout(window);
 }
+
 
 void Menu::updateLayout(const sf::RenderWindow& window) {
     const auto winSize = window.getSize();

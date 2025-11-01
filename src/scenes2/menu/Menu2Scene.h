@@ -4,9 +4,9 @@
 #include "../../components/menu/Menu.h"
 #include "core/scenes/Scene.h"
 
-class MenuScene final : public Scene {
+class Menu2Scene final : public Scene {
 public:
-    MenuScene(sf::RenderWindow& win, SceneManager& mgr);
+    Menu2Scene(sf::RenderWindow& win, SceneManager& mgr);
 
     void handleEvent(const sf::Event& event) override;
     void update(float dt) override;
